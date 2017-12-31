@@ -1,0 +1,328 @@
+
+$dayBase: 40px;
+$cloud: white;
+$base: 12px;
+$concrete:white;
+$seafoam:blue;
+$teal:red;
+$white:white;
+
+$light-blue-grey:gray;
+
+.breadcrumb > li + li:before {
+    /* color: #CCCCCC;*/
+     content: "";
+     padding: 0 5px;
+  }
+.calendar {
+  display: block;
+  width: $dayBase * 7;
+  margin: 0 auto;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .month-grid {
+    .day-names {
+      display: flex;
+      flex-direction: row;
+      background: $concrete;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .weeks {
+      display: flex;
+      flex-direction: column;
+    }
+    .week {
+      display: flex;
+      flex-direction: row;
+    }
+    .week-date,
+    .day-name {
+      text-align: center;
+      padding: $base;
+      display: block;
+      width: $dayBase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .week-date {
+      height: $dayBase;
+      position: relative;
+
+      .date-text {
+        z-index: 10;
+        font-size: 10px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      &::after {
+        content: '';
+        height: $dayBase * 0.9;
+        width: $dayBase * 0.9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: background-color 150ms linear, color 150ms linear;
+        z-index: 1;
+      }
+
+      &.enabled {
+        cursor: pointer;
+        &:hover {
+          &:after {
+            background-color: $seafoam;
+          }
+        }
+      }
+      &.selected {
+        color: yellow;
+        &:after {
+          background-color: $teal;
+        }
+        &:hover {
+          &:after {
+            background-color: $teal;
+          }
+        }
+      }
+
+      &.disabled {
+        color: $light-blue-grey;
+      }
+    }
+
+    .today {
+      font-weight: bold;
+      color: #FF5733;
+    }
+  }
+  body {
+    padding-top: 15px;
+    background-color: #f9f9f9;
+}
+
+
+ .weeks {
+      display: flex;
+      flex-direction: column;
+    }
+    .week {
+      display: flex;
+      flex-direction: row;
+    }
+    .week-date,
+    .day-name {
+      text-align: center;
+      padding: $base;
+      display: block;
+      width: $dayBase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .week-date {
+      height: $dayBase;
+      position: relative;
+
+      .date-text {
+        z-index: 10;
+        font-size: 10px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      &::after {
+        content: '';
+        height: $dayBase * 0.9;
+        width: $dayBase * 0.9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: background-color 150ms linear, color 150ms linear;
+        z-index: 1;
+      }
+
+      &.enabled {
+        cursor: pointer;
+        &:hover {
+          &:after {
+            background-color: $seafoam;
+          }
+        }
+      }
+      &.selected {
+        color: $white;
+        &:after {
+          background-color: $teal;
+        }
+        &:hover {
+          &:after {
+            background-color: $teal;
+          }
+        }
+      }
+
+      &.disabled {
+        color: $light-blue-grey;
+      }
+    }
+    .noborder td, .noborder th {
+        border: none !important;
+    }
+    .today {
+      font-weight: bold;
+      color:blueviolet;
+    }
+  
+  .noborder td, .noborder th {
+    border: none !important;
+}
+
+.month-grid {
+    .day-names {
+      display: flex;
+      flex-direction: row;
+      font-size: 17px;
+      font-weight: bold;
+      background: $concrete;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .weeks {
+      display: flex;
+      flex-direction: column;
+    }
+    .week {
+      display: flex;
+      flex-direction: row;
+    }
+    .week-date,
+    .day-name {
+      text-align: center;
+      padding: 20px;
+     
+      display: block;
+      width: $dayBase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .week-date {
+      height: $dayBase;
+      position: relative;
+      padding: 20px;
+
+      .date-text {
+        z-index: 10;
+        padding: 10px;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      &::after {
+        content: '';
+        height: $dayBase * 0.9;
+        width: $dayBase * 0.9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: background-color 150ms linear, color 150ms linear;
+        z-index: 1;
+      }
+
+      &.enabled {
+        cursor: pointer;
+        &:hover {
+          &:after {
+            background-color: $seafoam;
+          }
+        }
+      }
+      &.selected {
+        color: yellow;
+        &:after {
+          background-color: $teal;
+        }
+        &:hover {
+          &:after {
+            background-color: $teal;
+          }
+        }
+      }
+
+      &.disabled {
+        color: $light-blue-grey;
+      }
+    }
+
+    .today {
+      font-weight: bold;
+      color: black;
+      background-color: #EEE8AA;
+    }
+    #cMonth {
+      font-weight: bold;
+      color:red;
+      background-color: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+      padding: 3px;
+    }
+    
+
+  }
+
+  //////******** For the taking a year ************/////////////////
+
+}
+.button-yesno{
+  background: none;
+  border-color: 1px solid white;
+  color:gray;
+}
+
+.active{
+  border-color:#EEE8AA;
+  color: rgb(189, 181, 66);
+}
+.c-year-button{
+  background: #EEE8AA;
+  border: 1px solid white;
+  color:#000;
+  border-radius: 0px;
+}
+.year-button{
+  background: none;
+  border-radius: 0px;
+  color:#000;
+  margin-left: 20px;
+}
+.month-table{
+  border-collapse:0px;
+}
+table{
+  border:0px;
+  border-color:none;
+}
+.table{
+  border-color:none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  border:0px;
+}
+.noborder{
+  border:0px;
+}
+p{
+  font-size: 16px;
+}
