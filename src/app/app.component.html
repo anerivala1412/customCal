@@ -6,8 +6,8 @@
           Return Date
         </h3>
         <p>Show Flexible Dates
-          <button class="button-yesno active"> Yes </button>
-          <button class="button-yesno">No </button>
+          <button class="yes-btn"> Yes </button>
+          <button class="no-btn">No </button>
         </p>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6" style="border-right: 1px solid lightgray;">
@@ -18,8 +18,7 @@
           <table class="table noborder">
             <tbody>
               <tr>
-                <button type="submit" class="btn c-year-button" (click)="checkYear(currentYear)">{{ currentYear }}</button>
-                <button type="submit" class="btn  year-button" (click)="checkYear(uptoYear)">{{ uptoYear }}</button>
+                <button (click)="checkYear(year)" [ngClass]="{ active: currentYear === year }" *ngFor="let year of years">{{year}}</button>
               </tr>
             </tbody>
           </table>
@@ -29,10 +28,10 @@
           <table class="table">
             <tbody *ngFor="let d of months; let i = index" style="border:none;border-color:transparent;">
               <tr *ngIf="i % 4 === 0" style="border:none;border-color:transparent;">
-                <td id="cMonth" (click)="checkMonth(months[i])">{{months[i]}}</td>
-                <td id="cMonth" (click)="checkMonth(months[i+1])">{{months[i+1]}}</td>
-                <td id="cMonth" (click)="checkMonth(months[i+2])">{{months[i+2]}}</td>
-                <td id="cMonth" (click)="checkMonth(months[i+3])">{{months[i+3]}}</td>
+                <td [ngClass]="{ active: Currentmonth === months[i] }" (click)="checkMonth(months[i])">{{months[i]}}</td>
+                <td [ngClass]="{ active: Currentmonth === months[i+1] }" (click)="checkMonth(months[i+1])">{{months[i+1]}}</td>
+                <td [ngClass]="{ active: Currentmonth === months[i+2] }" (click)="checkMonth(months[i+2])">{{months[i+2]}}</td>
+                <td [ngClass]="{ active: Currentmonth === months[i+3] }" (click)="checkMonth(months[i+3])">{{months[i+3]}}</td>
               </tr>
             </tbody>
           </table>

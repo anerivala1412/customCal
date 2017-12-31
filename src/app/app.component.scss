@@ -10,7 +10,6 @@ $white:white;
 $light-blue-grey:gray;
 
 .breadcrumb > li + li:before {
-    /* color: #CCCCCC;*/
      content: "";
      padding: 0 5px;
   }
@@ -107,8 +106,6 @@ $light-blue-grey:gray;
     padding-top: 15px;
     background-color: #f9f9f9;
 }
-
-
  .weeks {
       display: flex;
       flex-direction: column;
@@ -282,47 +279,52 @@ $light-blue-grey:gray;
 
   }
 
-  //////******** For the taking a year ************/////////////////
-
 }
-.button-yesno{
-  background: none;
-  border-color: 1px solid white;
+ //////******** For the taking a year ************/////////////////
+.yes-btn{
+    background-color: khaki;
+    color: black;
+    font-weight: bold;
+}
+.yes-btn{
+  color: black;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 41px; 
+  font-size: 17px;
+  border-radius: 0px;
+  margin-left: 20px;
+  background: white;
   color:gray;
 }
-
 .active{
-  border-color:#EEE8AA;
-  color: rgb(189, 181, 66);
-}
-.c-year-button{
-  background: #EEE8AA;
-  border: 1px solid white;
-  color:#000;
-  border-radius: 0px;
-}
-.year-button{
-  background: none;
-  border-radius: 0px;
-  color:#000;
-  margin-left: 20px;
+  background: khaki;
+  border-color: none;
+  color:black;
+  font-weight: bold;
+  font-size: 17px;
 }
 .month-table{
   border-collapse:0px;
 }
-table{
-  border:0px;
-  border-color:none;
-}
-.table{
-  border-color:none;
-}
+
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   border:0px;
+  background-color: white;
+  
+}
+.table>tbody>tr>td.active{
+  background-color:khaki;
 }
 .noborder{
   border:0px;
 }
 p{
   font-size: 16px;
+}
+.choosen-Month{
+    background-color: khaki;
 }
