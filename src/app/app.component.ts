@@ -19,7 +19,7 @@ export class AppComponent {
   currentDate = moment();
   currentYear;
   uptoYear;
-  Currentmonth;
+  currentMonth;
   years = [];
   dayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
   weeks: CalendarDate[][] = [];
@@ -38,7 +38,7 @@ export class AppComponent {
     this.uptoYear = this.currentYear + 1;
     this.years.push(this.currentYear);
     this.years.push(this.uptoYear);
-    this.Currentmonth = moment().format('MMM');
+    this.currentMonth = moment().format('MMM');
     this.generateCalendar();
 
   }
@@ -74,12 +74,11 @@ export class AppComponent {
   checkMonth(choosenMonth) {
     this.currentDate = moment().month(choosenMonth);
     this.generateCalendar();
-    this.Currentmonth = choosenMonth;
+    this.currentMonth = choosenMonth;
   }
 
-  checkYear(choosenYear) {
+  checkYear(ev,choosenYear) {
     this.currentDate = moment().month(choosenYear);
-    //this.generateCalendar();
     this.currentYear = choosenYear;
 
   }

@@ -18,7 +18,7 @@
           <table class="table noborder">
             <tbody>
               <tr>
-                <button (click)="checkYear(year)" [ngClass]="{ active: currentYear === year }" *ngFor="let year of years">{{year}}</button>
+                <button (click)="checkYear($event,year)" [ngClass]="{ active: currentYear === year }" *ngFor="let year of years">{{year}}</button>
               </tr>
             </tbody>
           </table>
@@ -28,10 +28,10 @@
           <table class="table">
             <tbody *ngFor="let d of months; let i = index" style="border:none;border-color:transparent;">
               <tr *ngIf="i % 4 === 0" style="border:none;border-color:transparent;">
-                <td [ngClass]="{ active: Currentmonth === months[i] }" (click)="checkMonth(months[i])">{{months[i]}}</td>
-                <td [ngClass]="{ active: Currentmonth === months[i+1] }" (click)="checkMonth(months[i+1])">{{months[i+1]}}</td>
-                <td [ngClass]="{ active: Currentmonth === months[i+2] }" (click)="checkMonth(months[i+2])">{{months[i+2]}}</td>
-                <td [ngClass]="{ active: Currentmonth === months[i+3] }" (click)="checkMonth(months[i+3])">{{months[i+3]}}</td>
+                <td [ngClass]="{ active: currentMonth === months[i] }" (click)="checkMonth(months[i])">{{months[i]}}</td>
+                <td [ngClass]="{ active: currentMonth === months[i+1] }" (click)="checkMonth(months[i+1])">{{months[i+1]}}</td>
+                <td [ngClass]="{ active: currentMonth === months[i+2] }" (click)="checkMonth(months[i+2])">{{months[i+2]}}</td>
+                <td [ngClass]="{ active: currentMonth === months[i+3] }" (click)="checkMonth(months[i+3])">{{months[i+3]}}</td>
               </tr>
             </tbody>
           </table>
